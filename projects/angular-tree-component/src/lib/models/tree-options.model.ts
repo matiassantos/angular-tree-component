@@ -21,9 +21,9 @@ export const TREE_ACTIONS = {
   COLLAPSE: (tree: TreeModel, node: TreeNode, $event: any) => node.collapse(),
   DRILL_DOWN: (tree: TreeModel, node: TreeNode, $event: any) => tree.focusDrillDown(),
   DRILL_UP: (tree: TreeModel, node: TreeNode, $event: any) => tree.focusDrillUp(),
-  NEXT_NODE: (tree: TreeModel, node: TreeNode, $event: any) =>  tree.focusNextNode(),
-  PREVIOUS_NODE: (tree: TreeModel, node: TreeNode, $event: any) =>  tree.focusPreviousNode(),
-  MOVE_NODE: (tree: TreeModel, node: TreeNode, $event: any, {from , to}: {from: any, to: any}) => {
+  NEXT_NODE: (tree: TreeModel, node: TreeNode, $event: any) => tree.focusNextNode(),
+  PREVIOUS_NODE: (tree: TreeModel, node: TreeNode, $event: any) => tree.focusPreviousNode(),
+  MOVE_NODE: (tree: TreeModel, node: TreeNode, $event: any, { from, to }: { from: any, to: any }) => {
     // default action assumes from = node, to = {parent, index}
     if ($event.ctrlKey) {
       tree.copyNode(from, to);
@@ -160,7 +160,7 @@ export class TreeOptions {
     }
 
     // account for drop slots:
-    return nodeHeight + (node.index === 0 ?  2 : 1) * this.dropSlotHeight;
+    return nodeHeight + (node.index === 0 ? 2 : 1) * this.dropSlotHeight;
   }
 
   get dropSlotHeight(): number {
