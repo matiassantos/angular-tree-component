@@ -212,7 +212,8 @@ export class TreeNode implements ITreeNode {
               child.expand();
             }
           });
-      }}).then(() => {
+        }
+      }).then(() => {
         this.fireEvent({
           eventName: TREE_EVENTS.loadNodeChildren,
           node: this
