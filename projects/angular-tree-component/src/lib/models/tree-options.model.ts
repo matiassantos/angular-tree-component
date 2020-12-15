@@ -100,6 +100,7 @@ export class TreeOptions {
     console.log('defaultActionMapping', defaultActionMapping);
 
     // todo: figure out how to really replace defaultsDeep
+    // what about mergedeep or object-merge-advanced?
     this.actionMapping = {
       ...defaultActionMapping,
       ...this.options.actionMapping,
