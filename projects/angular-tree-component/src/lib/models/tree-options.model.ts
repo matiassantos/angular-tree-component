@@ -88,7 +88,7 @@ export class TreeOptions {
   get animateAcceleration(): number { return this.options.animateAcceleration || 1.2; }
   get scrollOnActivate(): boolean { return this.options.scrollOnActivate === undefined ? true : this.options.scrollOnActivate; }
   get rtl(): boolean { return !!this.options.rtl; }
-  get rootId(): any {return this.options.rootId; }
+  get rootId(): any { return this.options.rootId; }
   get useCheckbox(): boolean { return this.options.useCheckbox; }
   get useTriState(): boolean { return this.options.useTriState === undefined ? true : this.options.useTriState; }
   get scrollContainer(): HTMLElement { return this.options.scrollContainer; }
