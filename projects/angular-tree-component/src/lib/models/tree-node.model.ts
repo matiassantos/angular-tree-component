@@ -12,7 +12,7 @@ export class TreeNode implements ITreeNode {
   @computed get isFocused() { return this.treeModel.isNodeFocused(this); };
   @computed get isSelected() {
     if (this.isSelectable()) {
-        return this.treeModel.isSelected(this);
+      return this.treeModel.isSelected(this);
     } else {
       return this.children.some((node: TreeNode) => node.isSelected);
     }
@@ -86,11 +86,11 @@ export class TreeNode implements ITreeNode {
   }
 
   getField(key) {
-    return this.data[this.options[`${key}Field`]];
+    return this.data[this.options[`${ key }Field`]];
   }
 
   setField(key, value) {
-    this.data[this.options[`${key}Field`]] = value;
+    this.data[this.options[`${ key }Field`]] = value;
   }
 
   // traversing:
@@ -131,8 +131,8 @@ export class TreeNode implements ITreeNode {
 
   findNextNode(goInside = true, skipHidden = false) {
     return goInside && this.isExpanded && this.getFirstChild(skipHidden) ||
-           this.findNextSibling(skipHidden) ||
-           this.parent && this.parent.findNextNode(false, skipHidden);
+      this.findNextSibling(skipHidden) ||
+      this.parent && this.parent.findNextNode(false, skipHidden);
   }
 
   findPreviousNode(skipHidden = false) {
