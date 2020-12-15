@@ -3,6 +3,7 @@
 Thank you for reading this, we always welcome help make this project even better! Without the help from our contributors this project would not be possible.
 
 ## Code of Conduct
+
 Please read and follow our [Code of Conduct][coc].
 
 ## Setup
